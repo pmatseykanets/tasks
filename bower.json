@@ -1,0 +1,16 @@
+{
+  "name": "tasks",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.2.1",
+    "chosen": "~1.4.2"
+  }
+}
