@@ -1,7 +1,7 @@
 <?php
 
 
-class ExampleTest extends TestCase
+class LandingPageTest extends TestCase
 {
     /**
      * A basic functional test example.
@@ -11,6 +11,8 @@ class ExampleTest extends TestCase
     public function testBasicExample()
     {
         $this->visit('/')
-             ->see('Laravel 5');
+            ->see('Tasks')
+            ->see('Login')
+            ->see('Register');
     }
 }
