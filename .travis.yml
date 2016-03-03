@@ -24,8 +24,8 @@ install:
   - composer install --no-interaction --no-progress
 
 before_script:
-  - psql -c 'create database thinker_test;' -U postgres
-  - php artisan migrate --database=pgsql_test --env=testing --force
+  - psql -c 'create database tasks;' -U postgres
+  - php artisan migrate --database=pgsql --env=testing --force
   - if [[ '$TRAVIS_PHP_VERSION' != 'hhvm' ]]; then echo 'zend_extension = xdebug.so' >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini; fi
 
 script:
