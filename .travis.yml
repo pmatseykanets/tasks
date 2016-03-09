@@ -31,5 +31,10 @@ before_script:
 script:
  - phpunit --coverage-text --coverage-clover=coverage.clover
 
-after_success:
- - curl https://envoyer.io/deploy/SvPVesmtmhiFiOV3tQ8fRV26SguWjncrqOnxrNfG
+deploy:
+  provider: script
+  script: curl https://envoyer.io/deploy/SvPVesmtmhiFiOV3tQ8fRV26SguWjncrqOnxrNfG
+  on:
+    branch: master
+    tags: false
+    condition: $TRAVIS_PHP_VERSION = "7.0"
