@@ -29,7 +29,7 @@
                     <li><a href="/login">Login</a></li>
                     <li><a href="/register">Register</a></li>
                 @else
-                    <li class="@if(Request::path() == 'tasks/create') active @endif"><a href="{{ url('tasks/create') }}">New Task</a></li>
+                    {{--<li class="@if(Request::path() == 'tasks/create') active @endif"><a href="{{ url('tasks/create') }}">New Task</a></li>--}}
                     <li class="dropdown @if(Request::segment(1) == 'me') active @endif">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                             {{ Auth::user()->name }} <span class="caret"></span>

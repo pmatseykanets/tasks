@@ -22,4 +22,14 @@ class TestCase extends Illuminate\Foundation\Testing\TestCase
 
         return $app;
     }
+
+    /**
+     * @param array $overrides
+     *
+     * @return mixed
+     */
+    protected function getUser($overrides = [])
+    {
+        return factory(App\User::class)->create($overrides);
+    }
 }
