@@ -7,19 +7,19 @@ use Illuminate\Database\Eloquent\Model;
 class Task extends Model
 {
     protected $table = 'tasks';
-    
+
     protected $fillable = [
         'user_id',
         'task',
-        'completed_at'
+        'completed_at',
     ];
-    
+
     protected $dates = [
         'created_at',
         'updated_at',
         'completed_at',
     ];
-    
+
     protected $casts = [
         'user_id' => 'int',
     ];
