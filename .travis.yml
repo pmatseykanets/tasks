@@ -30,3 +30,6 @@ before_script:
 
 script:
  - phpunit --coverage-text --coverage-clover=coverage.clover
+
+after_success:
+ - curl https://envoyer.io/deploy/SvPVesmtmhiFiOV3tQ8fRV26SguWjncrqOnxrNfG
