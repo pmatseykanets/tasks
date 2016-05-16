@@ -23,6 +23,7 @@
         <env name="DB_DATABASE" value="tasks_test"/>
         <env name="CACHE_DRIVER" value="array"/>
         <env name="SESSION_DRIVER" value="array"/>
+        <env name="DB_DATABASE" value="tasks_test"/>
         <env name="QUEUE_DRIVER" value="sync"/>
     </php>
 </phpunit>

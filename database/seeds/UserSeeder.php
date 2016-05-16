@@ -16,7 +16,9 @@ class UserSeeder extends Seeder
             'email' => 'john@example.com',
             'password' => bcrypt('password'),
         ])->each(function ($u) {
-//            $u->tasks()->save(factory(App\Post::class)->make());
+            foreach (range(1, 10) as $item) {
+                $u->tasks()->save(factory(App\Task::class)->make());
+            }
         });
 
         factory(App\User::class, 5)->create()->each(function ($u) {

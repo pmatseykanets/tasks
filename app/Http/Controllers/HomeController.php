@@ -17,6 +17,6 @@ class HomeController extends Controller
             return view('welcome');
         }
 
-        return redirect(url('/tasks'));
+        return redirect(route('task.index'));
     }
 }
