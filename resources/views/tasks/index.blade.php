@@ -6,7 +6,7 @@
 
         @if(count($tasks) == 0 )
             <div class="list-group-item">
-                No tasks yet. Would you like to <a href="{{ url('tasks/create') }}">create</a> one?
+                No tasks yet. Would you like to create one?
             </div>
         @else
             <ul class="list-group">

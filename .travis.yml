@@ -24,9 +24,17 @@ install:
   - composer install --no-interaction --no-progress
 
 before_script:
-  - psql -c 'create database tasks;' -U postgres
+  - psql -c 'create database tasks_test;' -U postgres
   - php artisan migrate --database=pgsql --env=testing --force
   - if [[ '$TRAVIS_PHP_VERSION' != 'hhvm' ]]; then echo 'zend_extension = xdebug.so' >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini; fi
 
 script:
  - phpunit --coverage-text --coverage-clover=coverage.clover
+
+deploy:
+  provider: script
+  script: curl https://envoyer.io/deploy/SvPVesmtmhiFiOV3tQ8fRV26SguWjncrqOnxrNfG
+  on:
+    branch: master
+    tags: false
+    condition: $TRAVIS_PHP_VERSION = "7.0"
